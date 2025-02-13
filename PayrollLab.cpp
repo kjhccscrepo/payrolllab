@@ -23,6 +23,7 @@ int main()
         std::cout << "\nHow many hours have you worked this week: ";
         std::cin >> workerhours;
         if (std::cin.fail()) {
+            std::cin.clear(); std::cin.ignore(512, '\n');
             std::cout << "\nYou have failed to input a valid character. Please input a positive number...";
         }
         else if (workerhours <= 0) {
@@ -39,6 +40,7 @@ int main()
         std::cout << "\nHow many children do you have: ";
         std::cin >> workerchild;
         if (std::cin.fail()) {
+            std::cin.clear(); std::cin.ignore(512, '\n');
             std::cout << "\nYou have failed to input a valid character. Please input a positive number...";
         }
         else if (workerchild < 0) {
@@ -67,12 +69,12 @@ int main()
 
     std::cout << std::endl << std::endl;
     std::cout << "Payroll Stub:" << std::endl;
-    
+
     std::cout << std::endl;
     std::cout << std::setw(20) << "Hours Worked: ";
     std::printf("%.2f", workerhours);
     std::cout << std::endl;
-   
+
 
     std::cout << std::setw(20) << "Rate of Pay: ";
     std::cout << "16.78 $ / hr" << std::endl;
