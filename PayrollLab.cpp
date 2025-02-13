@@ -58,7 +58,7 @@ int main()
     if (workerhours > 40) {
         gross = (40 * 16.78);
         workermath = (workerhours - 40);
-        gross = (gross + (workerhours * (16.78 * 1.5)));
+        gross = (gross + (workermath * (16.78 * 1.5)));
 
 
     }
